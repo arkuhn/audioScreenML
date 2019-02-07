@@ -52,10 +52,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				os.makedirs(filepath)
 			with open(filepath + filename, "w") as text_file:
 				text_file.write('<html>')
-				text_file.write('<h1> Saved on: ' + months[now.month] + ' ' + str(now.day) + ', ' +  str(now.year) + '</h1>')
-				text_file.write('<h2>')
+				text_file.write('<h1> Saved on: ' + months[now.month] + ' ' + str(now.day) + ', ' +  str(now.year) + '</h1> <br/>')
+				text_file.write('<h1> <FONT FACE="arial">')
 				text_file.write(str(text))
-				text_file.write('</h2>')
+				text_file.write('</FONT FACE></h1>')
 				text_file.write('</html>')
 			webbrowser.open('file://' + (filepath + filename))
 				
